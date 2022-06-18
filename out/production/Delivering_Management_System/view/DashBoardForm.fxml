@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootFullPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="962.0" prefWidth="1627.0" stylesheets="@assets/styles/DashBoardStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="962.0" prefWidth="289.0" style="-fx-background-color: #34495e;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="187.0" prefWidth="289.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Pane layoutX="13.0" layoutY="15.0" prefHeight="119.0" prefWidth="264.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 20;" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="15.0">
+                           <effect>
+                              <DropShadow color="#0000007a" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="76.0" fitWidth="84.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/—Pngtree—collection%20logo%20tech_3588266.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="83.0" layoutY="30.0" prefHeight="45.0" prefWidth="131.0" text="Business" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="25" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="29.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="buttonShadow" />
+                        <String fx:value="allButton" />
+                     </styleClass>
+                     <effect>
+                        <DropShadow height="26.93" radius="10.74" spread="0.07" width="18.03" />
+                     </effect>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Employee" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/employee.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnVehicleOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Vehicle" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/vehicle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="24.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Customer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/customer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnItemOrderOnAtion" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Item Orders" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/order.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnItemStockOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Item Stock" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/stock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnVehicleStockOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Vehicle Stock" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/vehicleStock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnSoldItemOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Sold Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/icons8-money-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets right="22.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+                  <Button id="button" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnReturnItemOnAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-radius: 20px;" text="Return Item" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="35.83" radius="12.965" spread="0.07" width="18.03" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/returning.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="buttonDash" />
+                        <String fx:value="allButton" />
+                        <String fx:value="buttonShadow" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="rootHome" prefHeight="580.0" prefWidth="834.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

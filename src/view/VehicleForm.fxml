@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleFormController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="1634.0" style="-fx-background-color: #2c3e50;">
+               <children>
+                  <Label alignment="CENTER" text="Vehicle Managemant" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="945.0" prefWidth="1634.0">
+               <children>
+                  <Pane layoutX="46.0" layoutY="23.0" prefHeight="900.0" prefWidth="1542.0" style="-fx-background-radius: 20; -fx-background-color: #ecf0f1; -fx-border-color: #2c3e50; -fx-border-radius: 20;" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="23.0">
+                     <effect>
+                        <DropShadow color="#000000a9" height="33.44" radius="13.11" spread="0.09" />
+                     </effect>
+                     <children>
+                        <Label layoutX="618.0" layoutY="18.0" text="Add New Vehicle" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtVehicleID" labelFloat="true" layoutX="79.0" layoutY="172.0" prefHeight="44.0" prefWidth="365.0" promptText="Vehicle ID (EX : V001)">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtVehicleNumber" labelFloat="true" layoutX="559.0" layoutY="172.0" prefHeight="44.0" prefWidth="410.0" promptText="Vehicle Number">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtVehicleType" labelFloat="true" layoutX="1082.0" layoutY="171.0" prefHeight="44.0" prefWidth="392.0" promptText="Vehicle Type">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="78.0" layoutY="281.0" prefHeight="44.0" prefWidth="894.0" promptText="Description">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton layoutX="1206.0" layoutY="263.0" onAction="#btnAddVehicleOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Add Vehicle" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <TableView fx:id="tblVehicle" layoutX="78.0" layoutY="432.0" prefHeight="369.0" prefWidth="1396.0">
+                          <columns>
+                            <TableColumn fx:id="colVehicleID" prefWidth="209.66668701171875" text="Vehicle ID" />
+                            <TableColumn fx:id="colVehicleNumber" prefWidth="318.66668701171875" text="Vehicle Number" />
+                              <TableColumn fx:id="colVehicleType" prefWidth="334.6666259765625" text="Vehicle Type" />
+                              <TableColumn fx:id="colDescription" prefWidth="535.3333740234375" text="Description" />
+                          </columns>
+                        </TableView>
+                        <JFXButton layoutX="1206.0" layoutY="815.0" onAction="#btnUpdateOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton layoutX="914.0" layoutY="816.0" onAction="#btnEditOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Edit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton layoutX="624.0" layoutY="817.0" onAction="#btnRemoveOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                        </JFXButton>
+                     </children></Pane>
+                  <JFXTextField fx:id="txtSearchVehicle" labelFloat="true" layoutX="1098.0" layoutY="397.0" onKeyReleased="#txtSearchVehicleOnKey" prefHeight="44.0" prefWidth="419.0" promptText="Search">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <FontAwesomeIconView glyphName="SEARCH" layoutX="1488.0" layoutY="430.0" opacity="0.5" size="20" />
+               </children></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@assets/styles/StyleSheet.css" />
+      <URL value="@assets/styles/TableStyleSheet.css" />
+   </stylesheets>
+</StackPane>

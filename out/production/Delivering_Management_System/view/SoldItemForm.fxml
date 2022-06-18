@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SoldItemFormController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="1634.0" style="-fx-background-color: #2c3e50;">
+               <children>
+                  <Label alignment="CENTER" text="Sold Item Manage" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="945.0" prefWidth="1634.0">
+               <children>
+                  <Pane layoutX="23.0" layoutY="17.0" prefHeight="304.0" prefWidth="1589.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow color="#0000009a" spread="0.01" />
+                     </effect>
+                     <children>
+                        <Label layoutX="674.0" layoutY="7.0" text="Add Sold Items" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cmbCustomerID" labelFloat="true" layoutX="41.0" layoutY="82.0" prefHeight="44.0" prefWidth="251.0" promptText="Customer ID" />
+                        <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="357.0" layoutY="82.0" mouseTransparent="true" prefHeight="44.0" prefWidth="370.0" promptText="Customer Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cmbItemCode" labelFloat="true" layoutX="794.0" layoutY="82.0" prefHeight="44.0" prefWidth="275.0" promptText="Item Code" />
+                        <JFXTextField fx:id="txtItemName" labelFloat="true" layoutX="1138.0" layoutY="82.0" mouseTransparent="true" prefHeight="44.0" prefWidth="398.0" promptText="Item Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtSoldDate" labelFloat="true" layoutX="38.0" layoutY="200.0" prefHeight="44.0" prefWidth="248.0" promptText="Sold Date">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="333.0" layoutY="200.0" mouseTransparent="true" prefHeight="44.0" prefWidth="235.0" promptText="Unit Price">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtSoldItemQty" labelFloat="true" layoutX="752.0" layoutY="198.0" prefHeight="44.0" prefWidth="235.0" promptText="Sold Item QTY">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnViewSoldItem" layoutX="1304.0" layoutY="183.0" onAction="#btnViewSoldItemOnAction" prefHeight="61.0" prefWidth="246.0" style="-fx-background-radius: 10;" text="View Sold Items" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="1027.0" layoutY="184.0" onAction="#btnAddOnAction" prefHeight="61.0" prefWidth="246.0" style="-fx-background-radius: 10;" text="Add" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnViewAddItem" layoutX="1304.0" layoutY="183.0" onAction="#btnViewAddItemOnAction" prefHeight="61.0" prefWidth="246.0" style="-fx-background-radius: 10;" text="View Add Item" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnSoldItem" layoutX="21.0" layoutY="338.0" prefHeight="593.0" prefWidth="602.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow color="#00000070" spread="0.1" />
+                     </effect>
+                     <children>
+                        <Label layoutX="189.0" layoutY="1.0" text="Sold Items" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblSoldItem" layoutX="6.0" layoutY="134.0" prefHeight="388.0" prefWidth="590.0">
+                          <columns>
+                            <TableColumn fx:id="colSoldCustomerID" prefWidth="146.0" text="Customer ID" />
+                            <TableColumn fx:id="colSoldItemDate" prefWidth="163.0" text="Sold Date" />
+                              <TableColumn fx:id="colSoldTotalQty" prefWidth="128.66668701171875" text="Total QTY" />
+                              <TableColumn fx:id="colSoldTotalPrice" prefWidth="153.33334350585938" text="Total Price" />
+                          </columns>
+                        </TableView>
+                        <JFXTextField labelFloat="true" layoutX="248.0" layoutY="74.0" prefHeight="44.0" prefWidth="344.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <FontAwesomeIconView glyphName="SEARCH" layoutX="562.0" layoutY="109.0" opacity="0.5" size="18" />
+                        <JFXButton layoutX="385.0" layoutY="532.0" prefHeight="50.0" prefWidth="206.0" style="-fx-background-radius: 10;" text="Remove" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnSoldItemList" layoutX="636.0" layoutY="339.0" prefHeight="593.0" prefWidth="978.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow color="#00000070" spread="0.1" />
+                     </effect>
+                     <children>
+                        <Label layoutX="380.0" layoutY="-2.0" text="Sold Item List" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblSoldItemList" layoutX="6.0" layoutY="134.0" prefHeight="388.0" prefWidth="965.0">
+                           <columns>
+                              <TableColumn fx:id="colSoldItemCode" prefWidth="138.0" text="Item Code" />
+                              <TableColumn fx:id="colSoldItemName" prefWidth="402.00006103515625" text="Item Name" />
+                              <TableColumn fx:id="colListSoldDate" prefWidth="232.99993896484375" text="Sold Date" />
+                              <TableColumn fx:id="colSoldItemQty" prefWidth="191.3333740234375" text="Item QTY" />
+                           </columns>
+                        </TableView>
+                        <JFXTextField labelFloat="true" layoutX="623.0" layoutY="74.0" prefHeight="44.0" prefWidth="344.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <FontAwesomeIconView glyphName="SEARCH" layoutX="937.0" layoutY="109.0" opacity="0.5" size="18" />
+                        <JFXButton layoutX="762.0" layoutY="530.0" prefHeight="50.0" prefWidth="206.0" style="-fx-background-radius: 10;" text="Update" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnAddSoldItem" layoutX="22.0" layoutY="340.0" prefHeight="593.0" prefWidth="1591.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;" visible="false">
+                     <effect>
+                        <DropShadow color="#00000070" spread="0.1" />
+                     </effect>
+                     <children>
+                        <Label layoutX="669.0" layoutY="-1.0" text="Sold Item List" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblAddSoldItem" layoutX="6.0" layoutY="108.0" prefHeight="405.0" prefWidth="1578.0">
+                           <columns>
+                              <TableColumn fx:id="colCustomerID" prefWidth="194.6666717529297" text="Customer ID" />
+                              <TableColumn fx:id="colItemCode" prefWidth="186.0" text="Item Code" />
+                              <TableColumn fx:id="colItemName" prefWidth="571.0" text="Item Name" />
+                              <TableColumn fx:id="colSoldDate" prefWidth="243.6666259765625" text="Sold Date" />
+                              <TableColumn fx:id="colItemQty" prefWidth="195.3333740234375" text="Item QTY" />
+                              <TableColumn fx:id="colTotalPrice" prefWidth="194.666748046875" text="Total Price" />
+                           </columns>
+                        </TableView>
+                        <JFXButton layoutX="1375.0" layoutY="530.0" onAction="#btnConfirmOnAction" prefHeight="50.0" prefWidth="206.0" style="-fx-background-radius: 10;" text="Confirm" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="1154.0" layoutY="530.0" onAction="#btnRemoveAddItemOnAction" prefHeight="50.0" prefWidth="206.0" style="-fx-background-radius: 10;" text="Remove" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <Pane layoutX="8.0" layoutY="528.0" prefHeight="57.0" prefWidth="299.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;" visible="false">
+                           <children>
+                              <Label layoutX="18.0" layoutY="12.0" text="Total :" textFill="#e74c3c">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <effect>
+                              <DropShadow color="#00000094" height="10.0" radius="4.5" spread="0.1" width="10.0" />
+                           </effect>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="526.0" prefHeight="57.0" prefWidth="299.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;">
+                           <children>
+                              <Label layoutX="18.0" layoutY="12.0" text="Total :" textFill="#e74c3c">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalCost" layoutX="103.0" layoutY="12.0" prefHeight="36.0" prefWidth="176.0" textFill="#e74c3c">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <effect>
+                              <DropShadow color="#00000094" height="10.0" radius="4.5" spread="0.1" width="10.0" />
+                           </effect>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@assets/styles/StyleSheet.css" />
+      <URL value="@assets/styles/TableStyleSheet.css" />
+   </stylesheets>
+</StackPane>

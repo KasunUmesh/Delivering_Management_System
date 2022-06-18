@@ -1,0 +1,41 @@
+.colorGrad{
+    -fx-background-color: linear-gradient(to right, #ccffff 0%, #ffffff 60%);
+}
+.textField{
+    -fx-border-color: #34495e;
+    -fx-background-color: #fafafa;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 2px;
+}
+#button:pressed{
+    -fx-background-color: #2c3e50;
+}
+.login{
+    -fx-background-color:  #3498db;
+}
+.button1:hover{
+    -fx-background-color:  #e74c3c;
+}
+.buttonShadow:hover{
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+}
+.cancel{
+    -fx-background-color:  #fafafa;
+}
+.minimize:hover{
+    -fx-background-color:  #e0e0e0;
+}
+.addEmpButton{
+    -fx-background-color:#2ecc71;
+
+}
+.addEmpButton1:hover{
+    -fx-background-color: #27ae60;
+}
+.removeButton{
+    -fx-background-color: #e74c3c;
+}
+.removeButton1:hover{
+    -fx-background-color: #c0392b;
+}

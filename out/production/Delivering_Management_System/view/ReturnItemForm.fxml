@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnItemFormController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="1634.0" style="-fx-background-color: #2c3e50;">
+               <children>
+                  <Label alignment="CENTER" text="Return Items Manage" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="945.0" prefWidth="1634.0">
+               <children>
+                  <Pane layoutX="15.0" layoutY="16.0" prefHeight="259.0" prefWidth="1603.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow color="#00000090" spread="0.1" />
+                     </effect>
+                     <children>
+                        <Label layoutX="679.0" layoutY="1.0" text="Add Return Item" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cmbCustomerID" labelFloat="true" layoutX="48.0" layoutY="77.0" prefHeight="44.0" prefWidth="247.0" promptText="Customer ID" />
+                        <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="367.0" layoutY="77.0" prefHeight="44.0" prefWidth="389.0" promptText="Customer Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cmbItemCode" labelFloat="true" layoutX="824.0" layoutY="77.0" prefHeight="44.0" prefWidth="275.0" promptText="Item Code" />
+                        <JFXTextField fx:id="txtItemName" labelFloat="true" layoutX="1168.0" layoutY="77.0" prefHeight="44.0" prefWidth="389.0" promptText="Item Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtItemDescription" labelFloat="true" layoutX="47.0" layoutY="180.0" prefHeight="44.0" prefWidth="432.0" promptText="Item Description">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtReturnDate" labelFloat="true" layoutX="554.0" layoutY="180.0" prefHeight="44.0" prefWidth="260.0" promptText="Return Date">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtQtyOnReturn" labelFloat="true" layoutX="1027.0" layoutY="180.0" prefHeight="44.0" prefWidth="228.0" promptText="QTY On Return">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton layoutX="1302.0" layoutY="169.0" onAction="#btnAddReturnItemOnAction" prefHeight="58.0" prefWidth="251.0" style="-fx-background-radius: 10;" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="301.0" prefHeight="623.0" prefWidth="1604.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow color="#0000008d" spread="0.1" />
+                     </effect>
+                     <children>
+                        <Label layoutX="689.0" layoutY="4.0" text="Return Item List" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tblReturnItem" layoutX="13.0" layoutY="130.0" prefHeight="405.0" prefWidth="1577.0">
+                          <columns>
+                            <TableColumn fx:id="colCustomerID" prefWidth="161.0" text="Customer ID" />
+                            <TableColumn fx:id="colCustomerName" prefWidth="251.66668701171875" text="Customer Name" />
+                              <TableColumn fx:id="colItemCode" prefWidth="161.66668701171875" text="Item Code" />
+                              <TableColumn fx:id="colItemName" prefWidth="292.33331298828125" text="Item Name" />
+                              <TableColumn fx:id="colItemDescription" prefWidth="354.66668701171875" text="Item Description" />
+                              <TableColumn fx:id="colReturnDate" prefWidth="201.33331298828125" text="Return Date" />
+                              <TableColumn fx:id="colQtyOnReturn" prefWidth="155.33331298828125" text="QTY On Return" />
+                          </columns>
+                        </TableView>
+                        <JFXTextField labelFloat="true" layoutX="1228.0" layoutY="72.0" prefHeight="39.0" prefWidth="355.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <FontAwesomeIconView glyphName="SEARCH" layoutX="1557.0" layoutY="104.0" opacity="0.5" size="18" />
+                        <JFXButton layoutX="1332.0" layoutY="550.0" prefHeight="58.0" prefWidth="251.0" style="-fx-background-radius: 10;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton layoutX="1061.0" layoutY="550.0" prefHeight="58.0" prefWidth="251.0" style="-fx-background-radius: 10;" text="Edit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton layoutX="786.0" layoutY="549.0" prefHeight="58.0" prefWidth="251.0" style="-fx-background-radius: 10;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@assets/styles/StyleSheet.css" />
+      <URL value="@assets/styles/TableStyleSheet.css" />
+   </stylesheets>
+</StackPane>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="1634.0" style="-fx-background-color: #2c3e50;">
+               <children>
+                  <Label alignment="CENTER" text="Customer Managemant" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="945.0" prefWidth="1634.0">
+               <children>
+                  <Pane layoutX="47.0" layoutY="22.0" prefHeight="900.0" prefWidth="1542.0" style="-fx-background-radius: 20; -fx-background-color: #ecf0f1; -fx-border-color: #2c3e50; -fx-border-radius: 20;" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="22.0">
+                     <effect>
+                        <DropShadow color="#000000a9" height="33.44" radius="13.11" spread="0.09" />
+                     </effect>
+                     <children>
+                        <Label layoutX="618.0" layoutY="18.0" text="Add New Customer" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtCustomerID" labelFloat="true" layoutX="82.0" layoutY="172.0" prefHeight="44.0" prefWidth="365.0" promptText="Customer ID (EX : C001)">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="529.0" layoutY="172.0" prefHeight="44.0" prefWidth="463.0" promptText="Customer Name">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtShopName" labelFloat="true" layoutX="1049.0" layoutY="171.0" prefHeight="44.0" prefWidth="428.0" promptText="Shop Name">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtContactNumber" labelFloat="true" layoutX="81.0" layoutY="284.0" prefHeight="44.0" prefWidth="377.0" promptText="Contact Number">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton layoutX="1209.0" layoutY="266.0" onAction="#btnAddCustomerOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Add Customer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <TableView fx:id="tblCustomer" layoutX="81.0" layoutY="431.0" prefHeight="369.0" prefWidth="1396.0">
+                           <columns>
+                              <TableColumn fx:id="colCustomerID" prefWidth="183.33334350585938" text="Customer ID" />
+                              <TableColumn fx:id="colCustomerName" prefWidth="345.6666564941406" text="Customer Name" />
+                              <TableColumn fx:id="colShopName" prefWidth="289.0" text="Shop Name" />
+                              <TableColumn fx:id="colAddress" prefWidth="362.0" text="Address" />
+                              <TableColumn fx:id="colContactNumber" prefWidth="218.0" text="Contact Number" />
+                           </columns>
+                        </TableView>
+                        <JFXButton layoutX="1209.0" layoutY="814.0" onAction="#btnUpdateOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="addEmpButton" />
+                              <String fx:value="addEmpButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton layoutX="917.0" layoutY="815.0" onAction="#btnEditOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Edit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="527.0" layoutY="283.0" prefHeight="44.0" prefWidth="580.0" promptText="Address">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton layoutX="627.0" layoutY="815.0" onAction="#btnRemoveOnAction" prefHeight="67.0" prefWidth="266.0" style="-fx-background-radius: 10;" text="Remove" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="removeButton" />
+                              <String fx:value="removeButton1" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <JFXTextField fx:id="txtSearchCustomer" labelFloat="true" layoutX="1099.0" layoutY="395.0" onKeyReleased="#txtSearchCustomerOnKey" prefHeight="44.0" prefWidth="419.0" promptText="Search">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <FontAwesomeIconView glyphName="SEARCH" layoutX="1489.0" layoutY="428.0" opacity="0.5" size="20" />
+               </children></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@assets/styles/StyleSheet.css" />
+      <URL value="@assets/styles/TableStyleSheet.css" />
+   </stylesheets>
+</StackPane>

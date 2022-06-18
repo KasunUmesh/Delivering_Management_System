@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageFormController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="180.0" prefWidth="1634.0" style="-fx-background-color: #2c3e50;">
+               <children>
+                  <AnchorPane prefHeight="190.0" prefWidth="1634.0">
+                     <children>
+                        <Pane layoutX="40.0" layoutY="17.0" prefHeight="88.0" prefWidth="791.0" style="-fx-background-color: #263238; -fx-background-radius: 20;">
+                           <effect>
+                              <DropShadow spread="0.27" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="95.0" fitWidth="104.0" layoutX="36.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/—Pngtree—collection%20logo%20tech_3588266.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="176.0" layoutY="11.0" text="Deliver Management" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="45.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1314.0" layoutY="13.0" opacity="0.91" prefHeight="95.0" prefWidth="283.0" style="-fx-background-color: #263238; -fx-background-radius: 20;">
+                           <effect>
+                              <DropShadow spread="0.49" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="62.0" fitWidth="62.0" layoutX="8.0" layoutY="10.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/outline_timer_white_24dp.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lblDate" layoutX="97.0" layoutY="4.0" text="2021.10.17" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTime" layoutX="97.0" layoutY="46.0" text="05.33 PM" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="945.0" prefWidth="1634.0">
+               <children>
+                  <Pane layoutX="21.0" layoutY="201.0" prefHeight="674.0" prefWidth="697.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 20;">
+                     <children>
+                        <Pane layoutX="31.0" layoutY="146.0" prefHeight="167.0" prefWidth="628.0" style="-fx-background-radius: 20;" styleClass="paneColorGrad">
+                           <effect>
+                              <DropShadow color="#0000007d" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="141.0" layoutX="3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/vecteezypeople-business-iconrw0421_generated-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="231.0" layoutY="13.0" text="All Employee :">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAllEmployee" layoutX="459.0" layoutY="15.0" prefHeight="45.0" prefWidth="101.0">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="230.0" layoutY="64.0" text="Today Working :">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblWorking" layoutX="476.0" layoutY="66.0" prefHeight="45.0" prefWidth="88.0">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="229.0" layoutY="115.0" text="Today Not Working :">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblNotWorking" layoutX="537.0" layoutY="117.0" prefHeight="45.0" prefWidth="80.0">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="190.0" layoutY="43.0" size="25" />
+                              <FontAwesomeIconView fill="#2ecc71" glyphName="CIRCLE" layoutX="191.0" layoutY="96.0" size="25" />
+                              <FontAwesomeIconView fill="#e74c3c" glyphName="CIRCLE" layoutX="191.0" layoutY="146.0" size="25" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="34.0" layoutY="334.0" prefHeight="155.0" prefWidth="628.0" style="-fx-background-radius: 20;" styleClass="paneColorGrad">
+                           <effect>
+                              <DropShadow color="#00000093" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="118.0" fitWidth="122.0" layoutX="25.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/money.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="239.0" layoutY="5.0" text="Income">
+                                 <font>
+                                    <Font name="System Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView glyphName="DOLLAR" layoutX="208.0" layoutY="45.0" size="30" />
+                              <Label layoutX="206.0" layoutY="57.0" opacity="0.71" text="Rs.">
+                                 <font>
+                                    <Font name="System Bold" size="50.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblIncome" layoutX="287.0" layoutY="56.0" opacity="0.71" text="500000.00">
+                                 <font>
+                                    <Font name="System Bold" size="50.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="34.0" layoutY="512.0" prefHeight="136.0" prefWidth="628.0" style="-fx-background-radius: 20;" styleClass="paneColorGrad">
+                           <effect>
+                              <DropShadow color="#00000093" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="106.0" fitWidth="130.0" layoutX="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/delivery-truck.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="250.0" layoutY="9.0" text="Vehicle">
+                                 <font>
+                                    <Font name="System Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView glyphName="CHECK_CIRCLE" layoutX="208.0" layoutY="48.0" size="30" />
+                              <Label layoutX="250.0" layoutY="68.0" opacity="0.71" text="Available Vehicle :">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView fill="#2ecc71" glyphName="CIRCLE" layoutX="210.0" layoutY="98.0" size="25" />
+                              <Label fx:id="lblVehicle" layoutX="520.0" layoutY="69.0" opacity="0.71" prefHeight="45.0" prefWidth="88.0">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label layoutX="272.0" layoutY="12.0" text="Details">
+                           <font>
+                              <Font name="System Bold" size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow color="#0000009f" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="734.0" layoutY="23.0" prefHeight="389.0" prefWidth="884.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 20;">
+                     <effect>
+                        <DropShadow color="#0000008c" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="735.0" layoutY="430.0" prefHeight="444.0" prefWidth="884.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 20;">
+                     <effect>
+                        <DropShadow color="#0000008c" />
+                     </effect>
+                     <children>
+                        <TableView fx:id="tblItemList" layoutX="9.0" layoutY="98.0" prefHeight="333.0" prefWidth="864.0">
+                          <columns>
+                            <TableColumn fx:id="colItemCode" prefWidth="103.33331298828125" text="Item Code" />
+                            <TableColumn fx:id="colItemName" prefWidth="231.666748046875" text="Item Name" />
+                              <TableColumn fx:id="colItemDescription" prefWidth="278.333251953125" text="Description" />
+                              <TableColumn fx:id="colUnitPrice" prefWidth="134.6666259765625" text="Unit Price" />
+                              <TableColumn fx:id="colQtyOnStock" prefWidth="117.0" text="QTY On Stock" />
+                          </columns>
+                        </TableView>
+                        <JFXTextField labelFloat="true" layoutX="568.0" layoutY="46.0" prefHeight="39.0" prefWidth="300.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <FontAwesomeIconView glyphName="SEARCH" layoutX="841.0" layoutY="78.0" opacity="0.5" size="18" />
+                        <Label layoutX="368.0" layoutY="2.0" text="Items List">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="21.0" layoutY="20.0" prefHeight="155.0" prefWidth="692.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 20;">
+                     <effect>
+                        <DropShadow color="#0000009e" spread="0.07" />
+                     </effect>
+                     <children>
+                        <JFXButton layoutX="6.0" layoutY="39.0" prefHeight="71.0" prefWidth="225.0" style="-fx-background-radius: 15; -fx-background-color: #2c3e50;" text="View Items" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="36.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/stock.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton layoutX="235.0" layoutY="39.0" prefHeight="71.0" prefWidth="225.0" style="-fx-background-radius: 15; -fx-background-color: #2c3e50;" text="View Employee" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="35.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/employee.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton layoutX="463.0" layoutY="38.0" prefHeight="71.0" prefWidth="225.0" style="-fx-background-radius: 15; -fx-background-color: #2c3e50;" text="View Customer" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="34.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/customer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@assets/styles/DashBoardStyleSheet.css" />
+      <URL value="@assets/styles/TableStyleSheet.css" />
+   </stylesheets>
+</StackPane>
